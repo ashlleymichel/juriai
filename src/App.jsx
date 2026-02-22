@@ -9,7 +9,7 @@ import {
 
 // --- CONFIGURAÇÃO DA API ---
 // O ambiente de execução injetará a chave automaticamente se deixarmos como string vazia
-const apiKey = "";
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 const fetchWithRetry = async (url, options, retries = 5) => {
   const delays = [1000, 2000, 4000, 8000, 16000];
